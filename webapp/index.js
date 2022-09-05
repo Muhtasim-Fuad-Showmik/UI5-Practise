@@ -1,15 +1,13 @@
 sap.ui.define([
+	"sap/ui/core/mvc/XMLView",
 	"sap/m/Text"
 
-], function (Text) {
+], function (XMLView) {
 	"use strict";
 
-	new Text({
-		text: "Hello Fuad!"
-	}).placeAt("header");
-
-    new Text({
-		text: "Welcome to SAP UI5 Practise..."
-	}).placeAt("content");
-
+	XMLView.create({
+		viewName: "sap.ui.demo.walkthrough.view.App"
+	}).then(function(oView) {
+		oView.placeAt("header");
+	});
 });

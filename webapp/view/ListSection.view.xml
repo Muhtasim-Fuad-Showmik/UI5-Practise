@@ -1,0 +1,18 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.ListSection"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+>
+    <Panel
+        headerText="{i18n>listSectionTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+    >
+        <content>
+            <Text
+				text="Hello"
+				class="sapUiSmallMargin"
+			/>
+        </content>
+    </Panel>
+</mvc:View>

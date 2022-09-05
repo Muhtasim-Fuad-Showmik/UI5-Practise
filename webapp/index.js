@@ -8,6 +8,6 @@ sap.ui.define([
 	XMLView.create({
 		viewName: "sap.ui.demo.walkthrough.view.App"
 	}).then(function(oView) {
-		oView.placeAt("header");
+		oView.placeAt("content");
 	});
 });

@@ -21,15 +21,15 @@ sap.ui.define([
         onOpenDialog : function () {
             
         // WALKTHROUGH METHOD:
-            if(!this.pDialog) {
-                this.pDialog = this.loadFragment({
-                    name: "sap.ui.demo.walkthrough.view.HelloDialog"
-                });
-            }
+            // if(!this.pDialog) {
+            //     this.pDialog = this.loadFragment({
+            //         name: "sap.ui.demo.walkthrough.view.HelloDialog"
+            //     });
+            // }
             
-            this.pDialog.then(function(oDialog) {
-                oDialog.open();
-            });
+            // this.pDialog.then(function(oDialog) {
+            //     oDialog.open();
+            // });
             
         // BRANDON METHOD:
         //     var oView = this.getView();
@@ -47,12 +47,18 @@ sap.ui.define([
         //     } else {
         //         this.byId("helloDialog").open();
         //     }
-        },
-        onCloseDialog : function () {
-            // note: We don't need to chain to the pDialog promise, since this event-handler
-            // is only called from within the loaded dialog itself.
 
-            this.byId("helloDialog").close();
+        // NOTE: Commented code above has all been moved to component.js. Therefore, the following implementation has become necessary
+            this.getOwnerComponent().openHelloDialog();
         }
+
+        // NOTE: onCloseDialog not necessary anymore due to the reuse implementation of the component where it has already been handled.
+
+        // onCloseDialog : function () {
+        //     // note: We don't need to chain to the pDialog promise, since this event-handler
+        //     // is only called from within the loaded dialog itself.
+
+        //     this.byId("helloDialog").close();
+        // }
 	});
 });

@@ -2,12 +2,28 @@
    controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
+   <!--
+      The sorter property can be used to sort the data being displayed on the List.
+      Description for the properties are given below:
+
+      descending:    A Boolean property which when set to true will sort the list in the descending order. Default value: false.
+      group:         A Boolean property which when set to true will group data by provided path and automatically add headers to 
+                     using values the path to identify the group for each list item.
+    -->
+
    <List
       id="invoiceList"
       headerText="{i18n>invoiceListTitle}"
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{invoice>/Invoices}" >
+      items="{
+         path: 'invoice>/Invoices',
+         sorter: {
+            path: 'ShipperName',
+            group: true,
+            descending: false
+         }
+      }" >
       <headerToolbar>
          <Toolbar>
             <Title text="{i18n>invoiceListTitle}"/>

@@ -5,6 +5,16 @@
     <Dialog
         id="helloDialog"
         title="Hello {/recipient/name}">
+        <content>
+            <core:Icon
+                src="sap-icon://developer-settings"
+                size="8rem"
+                class="sapUiMediumMargin"/>
+            <Text
+				text="This alert is still under development."
+				class="sapUiSmallMargin"
+			/>
+        </content>
         <beginButton>
             <Button
                 text="{i18n>dialogCloseButtonText}"

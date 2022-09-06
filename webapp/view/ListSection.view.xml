@@ -1,18 +1,27 @@
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.ListSection"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 >
-    <Panel
+    <List
         headerText="{i18n>listSectionTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
+        items="{guide>/Guides}"
     >
-        <content>
-            <Text
-				text="Hello"
-				class="sapUiSmallMargin"
-			/>
-        </content>
-    </Panel>
+        <items>
+            <ObjectListItem
+                title="{guide>title}"/>
+                
+            <!-- 
+                Failed Attempt on making a nested list
+            <List
+                headerText="{guide>title}"
+                class="sapUiResponsiveMargin"
+                width="auto"
+                items="{guide>/Guides/0/tips}">
+                <StandardListItem
+                    title="{guide>attribute}"/>
+            </List> -->
+        </items>
+    </List>
 </mvc:View>

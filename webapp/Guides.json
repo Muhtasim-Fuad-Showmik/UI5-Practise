@@ -1,0 +1,63 @@
+{
+    "Guides": [
+        {
+            "title": "sap.app",
+            "tips": [
+                {
+                    "attribute": "id",
+                    "description": "The namespace of our application component."
+                },
+                {
+                    "attribute": "type",
+                    "description": "Defines what we want to configure."
+                },
+                {
+                    "attribute": "i18n",
+                    "description": "Defines the path to the resource bundle file."
+                },
+                {
+                    "attribute": "title",
+                    "description": "Title of the application in handlebars syntax referenced from the app's resource bundle."
+                },
+                {
+                    "attribute": "description",
+                    "description": "Short description text of what the application does in handlebars syntax references from the app's resource bundle."
+                },
+                {
+                    "attribute": "applicationVersion",
+                    "description": "The version of the application to be able to easily update the application alter on."
+                }
+            ]
+        },
+        {
+            "title": "sap.ui",
+            "tips": [
+                {
+                    "attribute": "technology",
+                    "description": "This value specifies the UI technology."
+                },
+                {
+                    "attribute": "deviceTypes",
+                    "description": "Tells what devices are supported by the app."
+                }
+            ]
+        },
+        {
+            "title": "sap.ui5",
+            "tips": [
+                {
+                    "attribute": "rootView",
+                    "description": "If your specify this parameter, the component will automatically instantiate the view and use it as the root for this component."
+                },
+                {
+                    "attribute": "dependencies",
+                    "description": "UI libraries used in the application are declared here."
+                },
+                {
+                    "attribute": "models",
+                    "description": "Can be used to define models and instantiate them when the app starts. Can also be used to define resource bundles and other configurations."
+                }
+            ]
+        }
+    ]
+}

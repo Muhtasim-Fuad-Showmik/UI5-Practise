@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Muhtasim-Fuad-Showmik/UI5-Practise#readme",
   "devDependencies": {
-    "@ui5/cli": "^2.14.10"
+    "@ui5/cli": "^2.14.11"
   }
 }

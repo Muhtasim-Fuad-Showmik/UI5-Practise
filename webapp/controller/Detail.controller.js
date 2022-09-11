@@ -2,12 +2,18 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
     "sap/ui/core/UIComponent",
 	"sap/ui/core/routing/History",
-	"sap/m/MessageToast"
-], function (Controller, UIComponent, History, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel"
+], function (Controller, UIComponent, History, MessageToast, JSONModel) {
 	"use strict";
 	return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
 		onInit: function () {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			var oViewModel = new JSONModel({
+				currency: "EUR"
+			});
+			this.getView().setModel(oViewModel, "view");
+
+			var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
 		},
 		_onObjectMatched: function (oEvent) {
@@ -16,6 +22,7 @@ sap.ui.define([
 				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
 				model: "invoice"
 			});
+		
 		},
 
 		onNavBack: function () {
